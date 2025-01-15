@@ -1,0 +1,34 @@
+ public void updateMountainLevel(int minutes, int xp){
+        /*Mountain Level isn't based on goatcoins but the amount of time spent on app*/
+
+        
+        switch(minutes){
+            case 1800:
+                mountain = Mountain.GLACIERPEAK;
+            case 6000:
+                mountain = Mountain.MOUNTBLANC;
+            
+            case 36000:
+                mountain = Mountain.MOUNTEVEREST;
+        }
+        
+        
+        if(minutes>=1800){ //60mins x 30hrs
+            mountain = Mountain.GLACIERPEAK;
+        }
+
+        if(minutes>=6000){
+            mountain = Mountain.GLACIERPEAK;
+        }
+
+        if(minutes>=36000){
+            mountain = Mountain.MOUNTBLANC;
+        }
+        
+        if(minutes>=150000){
+            mountain = Mountain.MOUNTEVEREST;
+        }
+        
+        
+    }
+//got rid of switch case as using if/else statements was better logically since you are dealing with target values of increasing/decreasing/equals ranges
